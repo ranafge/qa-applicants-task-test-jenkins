@@ -16,7 +16,7 @@ class UserFormSubmissionCest
         $I->click('//input[@type="submit"]');
     }
 
-    // tests
+
     public function tryToTestSubmitUserFormDataInDatabase(FunctionalTester $I)
     {
         $I->wantToTest("I want to check if the saved user form data is correctly stored in the database.");
