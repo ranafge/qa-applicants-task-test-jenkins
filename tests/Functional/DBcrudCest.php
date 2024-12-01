@@ -13,7 +13,7 @@ class UserFormSubmissionCest
         $I->fillField('//input[@type="text"]', "rana");
         $I->fillField('//input[@type="password"]', new PasswordArgument("Pass1234@"));
         $I->checkOption('#rememberme');
-        $I->click('//input[@type="submit"]');
+        $I->click('//input[@type="submit"]'); 
     }
 
 
