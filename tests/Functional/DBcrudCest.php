@@ -13,7 +13,7 @@ class UserFormSubmissionCest
         $I->fillField('//input[@type="text"]', "rana");
         $I->fillField('//input[@type="password"]', new PasswordArgument("Pass1234@"));
         $I->checkOption('#rememberme');
-        $I->click('//input[@type="submit"]'); 
+        $I->click('//input[@type="submit"]');
     }
 
 
@@ -40,6 +40,5 @@ class UserFormSubmissionCest
         $optionData = $I->grabFromDatabase('wp_options', 'option_value', ['option_name' => $optionName]);
         $data = unserialize($optionData);
         $I->assertEquals("TestForFullname", $data["qa_test_fullname"], "Full name exists in database");
-        codecept_debug($data);
     }
 }
